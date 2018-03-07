@@ -56,7 +56,6 @@ class Home extends Component {
     }
 
     render() {
-        console.log(process.env.PUBLIC_URL);
         return this.state.uploaded ?
             (<Redirect push to={`/image/${this.state.imageId}`}/>) : this.renderUpload.bind(this)();
     }
