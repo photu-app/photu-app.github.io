@@ -9,15 +9,19 @@ class NotFound extends Component {
 
     render() {
         return this.state.clicked ? (<Redirect push to="/"/>) :
-            (<div>
-                <h1>
-                    IDIOT. THERE AIN'T NO IMAGE ON THIS PATH. FUCKING IMBECILE.
-                </h1>
-                <button onClick={() => this.setState({clicked: true})}>
-                    Click on this button to take your sorry ass back to the homepage.
-                    FUCKING BLITHERING IDIOT.
-                </button>
-            </div>);
+            (<section className="hero is-danger is-fullheight">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <h1 className="title">
+                                404
+                            </h1>
+                            <button className="button is-primary is-outlined is-inverted" onClick={() => this.setState({clicked: true})}>
+                                Home
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            );
     }
 }
 
