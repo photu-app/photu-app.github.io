@@ -95,7 +95,7 @@ class Home extends Component {
                                                 </input>
                                             </div>
                                             <p className="control">
-                                                <CopyToClipboard text={`${process.env.PUBLIC_URL}${url}`}>
+                                                <CopyToClipboard text={`https://photu-app.github.io${url}`}>
                                                     <a className="button" onClick={() => {
                                                     }}>
                                                         Copy URL
