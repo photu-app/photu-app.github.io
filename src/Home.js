@@ -68,7 +68,8 @@ class Home extends Component {
     renderListOfFiles() {
         const images = [...this.state.images.values()];
         const imagePreviews = images.map((f) => {
-            const url = f.get('url');
+            let gistId = f.get('url');
+            const url = `https://photu-app.github.io${gistId}`;
             const {preview, name} = f.get('data');
             const uploadProgress = f.get('uploadProgress');
             return (
@@ -83,7 +84,7 @@ class Home extends Component {
                             <div className="content">
                                 <p className="has-text-white">{name}</p>
                                 {
-                                    url === undefined ?
+                                    gistId === undefined ?
                                         (<progress className="progress-bar is-white"
                                                    value={uploadProgress}
                                                    max='100'/>) :
@@ -91,13 +92,12 @@ class Home extends Component {
                                             <div className="control">
                                                 <input className="input is-success"
                                                        type="text"
-                                                       value={`${process.env.PUBLIC_URL}${url}`}>
+                                                       value={url}>
                                                 </input>
                                             </div>
                                             <p className="control">
-                                                <CopyToClipboard text={`https://photu-app.github.io${url}`}>
-                                                    <a className="button" onClick={() => {
-                                                    }}>
+                                                <CopyToClipboard text={url}>
+                                                    <a className="button">
                                                         Copy URL
                                                     </a>
                                                 </CopyToClipboard>
