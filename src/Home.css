@@ -1,4 +1,92 @@
 .Home {
-  text-align: center;
-  height: 200px;
+    text-align: center;
+    height: 200px;
+}
+
+.dropzone-container {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+}
+
+.dropzone-header {
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.dropzone-element {
+    border: ivory dashed 3px !important;
+}
+
+.light-purple {
+    color: #716DF9 !important;
+}
+
+.lighter-purple {
+    color: #807EFB !important;
+}
+
+.purple {
+    color: #4931A8 !important;
+}
+
+.white {
+    color: ivory !important;
+}
+
+.bg-lighter-purple {
+    background-color: #807EFB !important;
+}
+
+.preview-image {
+    height: 128px !important;;
+    width: 128px !important;;
+}
+
+.progress-bar {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 1px azure solid;
+    border-radius: 290486px;
+    display: block;
+    height: 1rem;
+    overflow: hidden;
+    padding: 0;
+}
+
+.progress-bar:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar::-webkit-progress-bar {
+    background-color: transparent;
+}
+
+.progress-bar::-webkit-progress-value {
+    background-color: transparent;
+}
+
+.progress-bar::-moz-progress-bar {
+    background-color: transparent;
+}
+
+.progress-bar::-ms-fill {
+    background-color: transparent;
+    border: none;
+}
+
+.progress-bar.is-white::-webkit-progress-value {
+    background-color: azure;
+}
+
+.progress-bar.is-white::-moz-progress-bar {
+    background-color: azure;
+}
+
+.progress-bar.is-white::-ms-fill {
+    background-color: azure;
+}
+
+.url-bar {
+    width: inherit;
 }
