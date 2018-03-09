@@ -1,17 +1,16 @@
 import Gist from 'gists';
 import request from 'request';
 
-export let create = (fileContents, cb) => {
+
+export let create = (fileName, fileContents, cb) => {
     const gist = new Gist();
-    gist.create({
+    let opts = {
         "description": "",
         "public": true,
-        "files": {
-            "imageFile": {
-                "content": fileContents
-            }
-        }
-    }, cb);
+        "files": {}
+    };
+    opts.files[fileName] = {content: fileContents};
+    gist.create(opts, cb);
 };
 
 export let get = (id, cb, err) => {

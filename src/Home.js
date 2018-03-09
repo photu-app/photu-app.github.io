@@ -39,7 +39,7 @@ class Home extends Component {
     readFile(f, reader) {
         return () => {
             f.get('updateProgress')(50);
-            create(reader.result, (err, resp) => {
+            create(f.get('data').name, reader.result, (err, resp) => {
                 f.get('updateProgress')(100);
                 f.get('updateURL')(`/image/${resp['id']}`)
             });
